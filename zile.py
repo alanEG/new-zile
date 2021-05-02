@@ -76,6 +76,7 @@ args = list(sys.argv)[1:]
 if "--file" in args: # if file parameter has given as argument
     totalFiles = []
     filesn = list(sys.argv)[2]
+    print(filesn)
     for root, dirs, files in os.walk(filesn):
         tempFiles = [os.path.join(os.getcwd(),os.path.join(root, i)[2:]) for i in files] # find every file under current directory
         totalFiles+=tempFiles # and add them to totalFiles array
